@@ -1,4 +1,4 @@
-# jayangphoenix
+# jayangphoenix frontend
 
 ## Project setup
 ```
