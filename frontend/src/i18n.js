@@ -3,7 +3,7 @@ import VueI18n from 'vue-i18n'
 import en from 'vuetify/lib/locale/en'
 import ko from 'vuetify/lib/locale/ko'
 
-Vue.use(VueI18n)
+Vue.use(VueI18n);
 
 const messages = {
   en: {
