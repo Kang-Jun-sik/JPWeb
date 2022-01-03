@@ -122,6 +122,14 @@
 <script>
 export default {
   name: 'DashboardDashboard',
+  watch: {
+    $route: {
+      handler($route) {
+
+      },
+      immediate: true,
+    }
+  },
 }
 </script>
 

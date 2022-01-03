@@ -174,6 +174,13 @@
 
 <script>
 export default {
-  //
+  watch: {
+    $route: {
+      handler($route) {
+
+      },
+      immediate: true,
+    }
+  },
 }
 </script>

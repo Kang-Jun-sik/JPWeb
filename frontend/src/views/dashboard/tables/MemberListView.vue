@@ -194,6 +194,14 @@ import MemberListBoard from '@/components/member/MemberListBoard';
 export default {
   components:{
     MemberListBoard
-  }
+  },
+  watch: {
+    $route: {
+      handler($route) {
+
+      },
+      immediate: true,
+    }
+  },
 }
 </script>

@@ -21,5 +21,13 @@
     data: () => ({
       expandOnHover: false,
     }),
+    watch: {
+      $route: {
+        handler($route) {
+
+        },
+        immediate: true,
+      }
+    },
   }
 </script>

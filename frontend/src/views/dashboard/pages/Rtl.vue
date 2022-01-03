@@ -396,6 +396,15 @@ export default {
     ],
   }),
 
+  watch: {
+    $route: {
+      handler($route) {
+
+      },
+      immediate: true,
+    }
+  },
+
   created() {
     this.$vuetify.rtl = true
     this.$i18n.locale = 'ar'

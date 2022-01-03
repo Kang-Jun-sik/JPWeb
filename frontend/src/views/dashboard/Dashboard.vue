@@ -596,6 +596,14 @@ export default {
     complete(index) {
       this.list[index] = !this.list[index]
     },
+    watch: {
+      $route: {
+        handler($route) {
+
+        },
+        immediate: true,
+      }
+    },
   },
 }
 </script>

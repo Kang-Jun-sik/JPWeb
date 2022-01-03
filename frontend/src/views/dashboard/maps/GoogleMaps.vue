@@ -107,6 +107,14 @@ export default {
       this.showLoading = false;
     }
   },
+  watch: {
+    $route: {
+      handler($route) {
+
+      },
+      immediate: true,
+    }
+  },
 }
 
 </script>
