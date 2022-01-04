@@ -4,10 +4,12 @@ module.exports = {
     devServer: {
         proxy: "http://localhost:8080"
     },
+    filenameHashing: false,
     chainWebpack: config => {
         const svgRule = config.module.rule("svg");
         svgRule.uses.clear();
         svgRule.use("vue-svg-loader").loader("vue-svg-loader");
+        config.optimization.minimize(false);
     },
     transpileDependencies: ['vuetify'],
 
