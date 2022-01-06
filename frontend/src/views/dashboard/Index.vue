@@ -8,6 +8,8 @@
 </template>
 
 <script>
+import {TestA} from "@/api/apitest";
+
   export default {
     name: 'DashboardIndex',
 
@@ -21,6 +23,7 @@
     data: () => ({
       expandOnHover: false,
     }),
+
     watch: {
       $route: {
         handler($route) {
@@ -29,5 +32,9 @@
         immediate: true,
       }
     },
+
+    async mounted() {
+      const response = await TestA();
+    }
   }
 </script>
