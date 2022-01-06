@@ -1,5 +1,5 @@
 import axios from "axios";
-import {setInterceptors} from "@/api/common/interceptors";
+import {setInterceptors} from '@/api/common/interceptors';
 
 // Auth-token이 필요한 API와 필요없는 API로 분류한다. API Splitting
 
@@ -9,7 +9,7 @@ import {setInterceptors} from "@/api/common/interceptors";
  */
 function createInstance() {
     return axios.create(({
-        baseURL: process.env.VUE_APP_API_URL,
+        baseURL: process.env.PHOENIX_API_URL,
     }))
 }
 
@@ -21,7 +21,7 @@ function createInstance() {
  */
 function createInstanceWithAuth(url) {
     const instance = axios.create({
-        baseURL: `${process.env.VUE_APP_API_URL}${url}`,
+        baseURL: `${process.env.PHOENIX_API_URL}${url}`,
     });
     return setInterceptors(instance);
 }
