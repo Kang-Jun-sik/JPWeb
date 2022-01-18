@@ -43,5 +43,13 @@ class PhoenixApplicationTests {
 			e.printStackTrace();
 		}
 	}
+	@Test
+	public void testBySqlSelectQuery() {
+		try {
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
 
 }
