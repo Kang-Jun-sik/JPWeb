@@ -12,7 +12,7 @@
 
 	<insert id="insertMember" parameterType="MemberDTO">
 		INSERT INTO memberList(
-		<include refid="memberColums"/>
+		<include refid="memberColums" />
 		)VALUES(
 		#{memberID},
 		#{name},

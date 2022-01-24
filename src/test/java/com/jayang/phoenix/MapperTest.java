@@ -7,7 +7,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.jayang.phoenix.domain.MemberDTO;
 import com.jayang.phoenix.mapper.MemberMapper;
 
-
+/**
+ * Refer URI : https://congsong.tistory.com/16?category=749196 
+ * @author kang
+ *
+ */
 @SpringBootTest
 class MapperTest {
 	
