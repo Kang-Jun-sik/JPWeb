@@ -7,128 +7,78 @@
     <v-row justify="center">
       <v-col
           cols="12"
-          md="8"
+          md="12"
       >
         <base-material-card>
           <template v-slot:heading>
             <div class="display-2 font-weight-light">
-              Edit Profile
+              플레이어
             </div>
 
             <div class="subtitle-1 font-weight-light">
-              Complete your profile
+              플레이어 정보 입력
             </div>
           </template>
 
           <v-form>
             <v-container class="py-0">
+
               <v-row>
-                <v-col
-                    cols="12"
-                    md="4"
-                >
-                  <v-text-field
-                      label="Company (disabled)"
-                      disabled
-                  />
+                <v-col cols="12" md="4" class="text-center">
+                  <v-text-field class="purple-input" label="유저 이름"/>
                 </v-col>
+              </v-row>
 
-                <v-col
-                    cols="12"
-                    md="4"
-                >
-                  <v-text-field
-                      class="purple-input"
-                      label="User Name"
-                  />
+              <v-row>
+                <v-col cols="12" md="4">
+                  <Combobox :comboLabel="positionLabel" :items="positions"></Combobox>
                 </v-col>
+              </v-row>
 
-                <v-col
-                    cols="12"
-                    md="4"
-                >
-                  <v-text-field
-                      label="Email Address"
-                      class="purple-input"
-                  />
+              <v-row>
+                <v-col cols="12" md="4">
+                  <Combobox :comboLabel="sexLabel" :items="sex"></Combobox>
                 </v-col>
+              </v-row>
 
-                <v-col
-                    cols="12"
-                    md="6"
-                >
-                  <v-text-field
-                      label="First Name"
-                      class="purple-input"
-                  />
-                </v-col>
 
-                <v-col
-                    cols="12"
-                    md="6"
-                >
-                  <v-text-field
-                      label="Last Name"
-                      class="purple-input"
-                  />
-                </v-col>
+              <!--
+              <v-col cols="12" md="4">
+                <v-text-field label="Email Address" class="purple-input"/>
+              </v-col>
 
-                <v-col cols="12">
-                  <v-text-field
-                      label="Adress"
-                      class="purple-input"
-                  />
-                </v-col>
 
-                <v-col
-                    cols="12"
-                    md="4"
-                >
-                  <v-text-field
-                      label="City"
-                      class="purple-input"
-                  />
-                </v-col>
+              <v-col cols="12" md="6">
+                <v-text-field label="First Name" class="purple-input"/>
+              </v-col>
 
-                <v-col
-                    cols="12"
-                    md="4"
-                >
-                  <v-text-field
-                      label="Country"
-                      class="purple-input"
-                  />
-                </v-col>
+              <v-col cols="12" md="6">
+                <v-text-field label="Last Name" class="purple-input"/>
+              </v-col>
 
-                <v-col
-                    cols="12"
-                    md="4"
-                >
-                  <v-text-field
-                      class="purple-input"
-                      label="Postal Code"
-                      type="number"
-                  />
-                </v-col>
+              <v-col cols="12">
+                <v-text-field label="Adress" class="purple-input"/>
+              </v-col>
 
-                <v-col cols="12">
-                  <v-textarea
-                      class="purple-input"
-                      label="About Me"
-                      value="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                  />
-                </v-col>
+              <v-col cols="12" md="4">
+                <v-text-field label="City" class="purple-input"/>
+              </v-col>
 
-                <v-col
-                    cols="12"
-                    class="text-right"
-                >
-                  <v-btn
-                      color="success"
-                      class="mr-0"
-                  >
-                    Update Profile
-                  </v-btn>
+              <v-col cols="12" md="4">
+                <v-text-field label="Country" class="purple-input"/>
+              </v-col>
+
+              <v-col cols="12" md="4">
+                <v-text-field class="purple-input" label="Postal Code" type="number"/>
+              </v-col>
+
+              <v-col cols="12">
+                <v-textarea class="purple-input" label="About Me" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit."/>
+              </v-col>
+              -->
+              <v-row>
+                <v-col cols="12" class="text-right">
+                  <v-btn color="success" class="mr-0"> 등록</v-btn>
                 </v-col>
               </v-row>
             </v-container>
@@ -140,6 +90,7 @@
           cols="12"
           md="4"
       >
+        <!--
         <base-material-card
             class="v-card-profile"
             avatar="https://demos.creative-tim.com/vue-material-dashboard/img/marc.aba54d65.jpg"
@@ -167,13 +118,28 @@
             </v-btn>
           </v-card-text>
         </base-material-card>
+        -->
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
+import Combobox from "@/components/base/Combobox";
+
 export default {
+  data() {
+    return {
+      positionLabel: "Position",
+      positions: ['가드', '포워드', '센터'],
+      sexLabel: '성별',
+      sex: ['남', '여']
+    }
+  },
+  components: {
+    Combobox,
+  },
+
   watch: {
     $route: {
       handler($route) {
