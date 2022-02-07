@@ -15,6 +15,7 @@ class PhoenixApplicationTests {
 	@Autowired
 	private SqlSessionFactory sessionFactory;
 	
+	/*
 	@Test
 	void contextLoads() {
 		
@@ -51,5 +52,6 @@ class PhoenixApplicationTests {
 			e.printStackTrace();
 		}
 	}
+	*/
 
 }
