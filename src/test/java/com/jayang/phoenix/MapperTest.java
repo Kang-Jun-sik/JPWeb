@@ -20,6 +20,7 @@ class MapperTest {
 
 	@Test
 	public void testOfInsert() {
+		/*
 		MemberDTO params = new MemberDTO();
 		params.setMemberID("kcu14362");
 		params.setName("강준식");
@@ -29,6 +30,7 @@ class MapperTest {
 		
 		int result = memberMapper.insertMember(params);
 		System.out.println("결과는 " + result + "입니다.");
+		*/
 	}
 
 }

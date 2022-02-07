@@ -14,9 +14,6 @@ configurations {
 	}
 }
 
-bootJar {
-	mainClassName = 'com.jayang.phoenix.PhoenixApplication'
-
 repositories {
 	mavenCentral()
 }
